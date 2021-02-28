@@ -1,3 +1,7 @@
+/**
+ * The main server that serves the index page and also acts as a API router which queries the database
+ */
+
 const express = require("express");
 
 const get = require("./index");
@@ -11,8 +15,13 @@ const PORT = process.env.PORT || 8181;
 const app = express();
 
 app.get("/transact", async (req, res) => {
-  let result = await get("arumugam-con504");
-  res.json({ success: result });
+  let searchVal = req.query.id.replace(/[^a-zA-Z ]/g, "");
+  if (searchVal.length > 0) {
+    let result = await get(searchVal);
+    res.json({ status: "success", result: result });
+  } else {
+    res.json({ status: "failure", result: "invalid input" });
+  }
 });
 
 app.use("/", serveStatic(path.join(__dirname, "/")));
