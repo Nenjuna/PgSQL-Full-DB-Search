@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Search Database</title>
+</head>
+<body>
+    <header>
+        <ul><li><img src="./assets/database.svg" alt="database"/></li></ul>
+    </header>
+    <main>
+        <div class="container">
+            <div class="title">Database Search</div>
+            <hr>
+            <div class="search">
+                <input type="text" name="search" id="search" placeholder="Full Database Search...">
+                <button id="searchdb">Search</button>
+            </div>
+            <hr>
+            <div class="res">RESULTS</div>
+        </div>
+        <div class="total" id="total">Showing 1-10 of 100 results</div>
+        <div class="results">
+            <table id="result">
+            </table>
+        </div>
+    </main>
+    <script src="./script.js"></script>
+</body>
+</html>
