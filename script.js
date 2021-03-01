@@ -68,7 +68,7 @@ async function getResults(searchval) {
       });
       html += `</tbody>`;
       table.innerHTML = html;
-      totalres.innerText = `RESULTS: ${total} matching records fetched from the database`;
+      totalres.innerText = `RESULTS: ${total} matching records found`;
       resres.style.display = "block";
       totalres.style.display = "block";
       success.style.display = "block";
