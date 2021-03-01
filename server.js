@@ -10,7 +10,9 @@ const serveStatic = require("serve-static");
 
 const path = require("path");
 
-const PORT = process.env.PORT || 8181;
+const config = require("./config");
+
+const PORT = process.env.PORT || config["serverport"];
 
 const app = express();
 
