@@ -163,10 +163,9 @@ hr {
 }
 
 .total {
-  padding: 15px;
-  color: #585252;
-  font-size: 0.9rem;
   font-weight: bold;
+  font-size: 0.8rem;
+  margin-top: 15px;
   display: none;
 }
 
