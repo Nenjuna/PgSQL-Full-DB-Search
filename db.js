@@ -1,10 +1,13 @@
 const { Pool } = require("pg");
+
+const config = require("./config.json");
+
 const pool = new Pool({
-  user: "sdpadmin",
-  host: "localhost",
-  database: "servicedesk",
-  password: "sdp@123",
-  port: "65432",
+  user: config["user"],
+  host: config["host"],
+  database: config["database"],
+  password: config["password"],
+  port: config["port"],
 });
 module.exports = {
   query: async (text, params) => await pool.query(text, params),

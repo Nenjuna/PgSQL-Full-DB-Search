@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <title>Search Database</title>
 </head>
 <body>
     <header>
-        <ul><li><img src="./assets/database.svg" alt="database"/></li></ul>
+        <ul><li><img src="./assets/server-solid.svg" alt="database"/></li></ul>
     </header>
     <main>
         <div class="container">
@@ -19,35 +20,23 @@
             <div class="search">
                 <input type="text" name="search" id="search" placeholder="Full Database Search...">
                 <button id="searchdb">Search</button>
+                <svg class="loader" viewBox="0 0 24 24">
+                    <circle class="loader__value" cx="12" cy="12" r="10" />
+                    <circle class="loader__value" cx="12" cy="12" r="10" />
+                    <circle class="loader__value" cx="12" cy="12" r="10" />
+                    <circle class="loader__value" cx="12" cy="12" r="10" />
+                    <circle class="loader__value" cx="12" cy="12" r="10" />
+                    <circle class="loader__value" cx="12" cy="12" r="10" />
+                </svg>  
             </div>
             <hr>
-            <div class="res">RESULTS</div>
+            <div class="success" id="success">Results are successfully fetched</div>
+            <div class="warning" id="warning">Something went wrong</div>
+            <div class="res">RESULTS:</div>
         </div>
-        <div class="total" id="total" style="display: block;">Showing 1 - 4 of 4</div>
+        <div class="total" id="total">Showing 1 - 4 of 4</div>
         <div class="results">
             <table id="result">
-                <tbody>
-                    <tr>
-                        <th>TABLE.COLUMN</th>
-                        <th>VALUE</th>
-                    </tr>
-                    <tr>
-                        <td>CI.CINAME</td>
-                        <td>Shawn Adams</td>
-                    </tr>
-                    <tr>
-                        <td>AAAUSER.FIRST_NAME</td>
-                        <td>Shawn Adams</td>
-                    </tr>
-                    <tr>
-                        <td>SDUSER.FIRSTNAME</td>
-                        <td>Shawn</td>
-                    </tr>
-                    <tr>
-                        <td>USERDEPTHISTORYDETAILS.NEWVALUE</td>
-                        <td>Shawn</td>
-                    </tr>
-                </tbody>
             </table>
         </div>
     </main>

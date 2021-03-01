@@ -1,0 +1,7 @@
+{
+  "user": "sdpadmin",
+  "host": "127.0.0.1",
+  "database": "servicedesk",
+  "password": "sdp@123",
+  "port": "65432"
+}

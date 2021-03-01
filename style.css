@@ -27,13 +27,13 @@ body {
   margin: 0;
   padding: 15px;
   border-bottom: 1px solid #eeeeee;
+  box-shadow: 3px 4px 40px 1px rgba(0, 0, 0, 0.3);
 }
 
 .results {
   background-color: #fff;
   width: 100%;
   margin: 0;
-  /* padding: 15px; */
 }
 
 input[type="text"] {
@@ -58,6 +58,11 @@ input[type="text"]:active {
   border: none;
   width: 400px;
   height: 4vh;
+}
+
+input:focus {
+  outline-width: 0;
+  outline: none;
 }
 
 header {
@@ -113,11 +118,19 @@ hr {
   height: 4vh;
   margin-top: 10px;
   margin-left: 40px;
+  outline-width: 0;
+  outline: none;
+}
+
+#searchdb:focus {
+  outline-width: 0;
+  outline: none;
 }
 .res {
   font-weight: bold;
   font-size: 0.8rem;
   margin-top: 15px;
+  display: none;
 }
 
 #result {
@@ -135,10 +148,18 @@ hr {
   padding-right: 40px;
   text-align: center;
   width: 50%;
+  overflow-wrap: break-word;
+  max-width: 500px;
 }
 
 #result th {
   background-color: #f8f6f4;
+}
+
+#result td img {
+  height: 20px;
+  width: 20px;
+  padding-top: 10px;
 }
 
 .total {
@@ -146,5 +167,42 @@ hr {
   color: #585252;
   font-size: 0.9rem;
   font-weight: bold;
+  display: none;
+}
+
+.table {
+  background-color: rgba(240, 93, 94, 1);
+  padding: 5px;
+  color: #fff;
+}
+
+.column {
+  background-color: rgba(68, 187, 164, 1);
+  padding: 5px;
+  color: #fff;
+}
+
+.success {
+  background-color: rgba(118, 230, 177, 0.562);
+  font-size: 0.9rem;
+  padding: 8px;
+  width: 20%;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(0, 117, 49);
+  border-radius: 3px;
+  border: 1px solid rgb(118, 230, 49);
+  display: none;
+}
+.warning {
+  background-color: rgba(255, 149, 130, 0.582);
+  font-size: 0.9rem;
+  padding: 8px;
+  width: 20%;
+  text-align: center;
+  font-weight: bold;
+  color: rgb(180, 38, 33);
+  border-radius: 3px;
+  border: 1px solid rgb(241, 120, 111);
   display: none;
 }
